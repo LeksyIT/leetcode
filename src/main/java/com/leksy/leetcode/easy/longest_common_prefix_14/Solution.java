@@ -1,20 +1,17 @@
 package com.leksy.leetcode.easy.longest_common_prefix_14;
 
-public class Solution {
+class Solution {
 
   public static String longestCommonPrefix(String[] strs) {
-    if (strs.length == 0) {
-      return "";
-    }
-    String start = strs[0];
-    for (int i = 1; i < strs.length; i++) {
-      while (strs[i].indexOf(start) != 0){
-       start = start.substring(0,start.length()-1);
-       if (start.isEmpty()){
-         return "";
-       }
+    String target = strs[0];
+    for (int i = 0; i < strs.length; i++) {
+      if (target.length() == 0) {
+        return target;
+      }
+      while (strs[i].indexOf(target) != 0) {
+        target = target.substring(0, target.length() - 1);
       }
     }
-    return start;
+    return target;
   }
 }
