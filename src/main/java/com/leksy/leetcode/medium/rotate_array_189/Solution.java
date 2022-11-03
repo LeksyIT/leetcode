@@ -1,4 +1,4 @@
-package com.leksy.leetcode.easy.rotate_array_189;
+package com.leksy.leetcode.medium.rotate_array_189;
 
 public class Solution {
 
