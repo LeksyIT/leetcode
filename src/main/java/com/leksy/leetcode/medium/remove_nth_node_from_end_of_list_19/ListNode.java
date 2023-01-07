@@ -1,4 +1,4 @@
-package com.leksy.leetcode.easy.merge_two_sorted_lists_21;
+package com.leksy.leetcode.medium.remove_nth_node_from_end_of_list_19;
 
 public class ListNode {
 
@@ -8,7 +8,7 @@ public class ListNode {
   ListNode() {
   }
 
-  public ListNode(int val) {
+  ListNode(int val) {
     this.val = val;
   }
 
