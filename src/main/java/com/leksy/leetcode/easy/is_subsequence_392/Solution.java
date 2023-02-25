@@ -3,15 +3,16 @@ package com.leksy.leetcode.easy.is_subsequence_392;
 public class Solution {
 
   public static void main(String[] args) {
-    System.out.println(isSubsequence(
-        "axc", "ahbgdc"));
+    System.out.println(isSubsequence("abc", "ahbgdc"));
   }
+
   public static boolean isSubsequence(String s, String t) {
-    int i = 0, j = 0;
-    while(i < s.length() && j < t.length()){
-      if(s.charAt(i) == t.charAt(j)) i++;
-      j++;
+    int j = 0;
+    for (int i = 0; i < t.length(); i++) {
+      if (t.charAt(i) == s.charAt(j)) {
+        j++;
+      }
     }
-    return i == s.length();
+    return j == s.length();
   }
 }

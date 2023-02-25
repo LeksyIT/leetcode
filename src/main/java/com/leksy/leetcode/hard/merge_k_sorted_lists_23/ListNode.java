@@ -1,4 +1,5 @@
-package com.leksy.leetcode.easy.linked_list_cycle_II_142;
+package com.leksy.leetcode.hard.merge_k_sorted_lists_23;
+
 
 public class ListNode {
 

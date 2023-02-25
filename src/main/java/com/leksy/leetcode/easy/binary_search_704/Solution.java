@@ -3,21 +3,21 @@ package com.leksy.leetcode.easy.binary_search_704;
 class Solution {
 
   public static void main(String[] args) {
-    System.out.println(search(new int[]{-1, 0, 3, 5, 9, 12}, 0));
+    System.out.println(search(new int[]{-1, 0, 3, 5, 9, 12}, 9));
   }
 
   public static int search(int[] nums, int target) {
-    int low = 0;
-    int high = nums.length-1;
-    while (low <= high) {
-      int middle = (low + high) / 2;
-      if (middle == target) {
-        return middle;
+    int left = 0;
+    int right = nums.length;
+    while (left != right) {
+      int mid = left + (right - left) / 2;
+      if (nums[mid] == target) {
+        return mid;
       }
-      if (middle < target) {
-        low = middle + 1;
+      if (nums[mid] > target) {
+        right = mid;
       } else {
-        high = middle - 1;
+        left = mid + 1;
       }
     }
     return -1;

@@ -7,37 +7,13 @@ public class Solution {
   }
 
   public static int maxProfit(int[] prices) {
-    int buy = Integer.MAX_VALUE;
-    int maxProfit = 0;
-
-    for (int i = 0; i < prices.length; i++) {
-      if (prices[i] < buy) {
-        buy = prices[i];
-      }
-      int profit = prices[i] - buy;
-      if (maxProfit < profit) {
-        maxProfit = profit;
-      }
+    int result = 0;
+    int min = prices[0];
+    for (int i = 1; i < prices.length; i++) {
+      int element = prices[i];
+      min = Math.min(min, element);
+      result = Math.max(result, element - min);
     }
-    return maxProfit;
+    return result;
   }
-
-//  public static int maxProfit(int[] prices) {
-//    int buy = 0;
-//    int sell = 1;
-//    int maxProfit = 0;
-//    while (sell<prices.length){
-//      int currentProfit = prices[sell] - prices[buy];
-//      if (prices[sell] > prices[buy]){
-//        if (maxProfit<currentProfit){
-//          maxProfit=currentProfit;
-//        }
-//      } else {
-//        buy = sell;
-//      }
-//
-//      sell+=1;
-//    }
-//    return maxProfit;
-//  }
 }
